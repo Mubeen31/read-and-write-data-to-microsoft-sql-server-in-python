@@ -1,11 +1,11 @@
 import pyodbc as odbc
 
 sql_conn = odbc.connect("Driver={ODBC Driver 17 for SQL Server};"
-                        "Server=sensorstemphum.database.windows.net;"
-                        "Database=weatherdata;"
+                        "Server=;"
+                        "Database=;"
                         "Trusted_Connection = yes;"
-                        "UID=temphum;"
-                        "PWD=Temp!hum;"
+                        "UID=;"
+                        "PWD=;"
                         )
 cursor = sql_conn.cursor()
 date_time = '2022-10-09 19:25:24'
@@ -13,7 +13,7 @@ voltage = 0.14648
 value_current = 0.0
 count = cursor.execute("""
                        INSERT INTO 
-                       dbo.WeatherSensorsData (DateTime,
+                       type table name here (DateTime,
                        Voltage,
                        ValueCurrent)
                        VALUES (?,?,?)""",
