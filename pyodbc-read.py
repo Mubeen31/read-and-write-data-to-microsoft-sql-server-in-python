@@ -5,17 +5,17 @@ import warnings
 warnings.filterwarnings('ignore')
 
 sql_conn = odbc.connect("Driver={ODBC Driver 17 for SQL Server};"
-                        "Server=sensorstemphum.database.windows.net;"
-                        "Database=weatherdata;"
+                        "Server=;"
+                        "Database=;"
                         "Trusted_Connection = yes;"
-                        "UID=temphum;"
-                        "PWD=Temp!hum;"
+                        "UID=;"
+                        "PWD=;"
                         )
 sql_query = f"""SELECT
 DateTime,
 Voltage,
 ValueCurrent
-FROM dbo.WeatherSensorsData
+FROM type table name here
 ORDER BY
 DateTime
 """
